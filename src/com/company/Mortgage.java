@@ -31,9 +31,6 @@ public class Mortgage {
     }
 
     public  double calculateBalance(
-//            int principal,
-//            float annualInterest,
-//            byte years,
              short numberOfPaymentsMade
     ) {
 

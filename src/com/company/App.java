@@ -2,7 +2,7 @@ package com.company;
 
 public class App {
 
-    public void run() {
+    public static void run() {
 
         var read = new Read();
         int principal = (int) read.readNumber("Principal: ", 1000, 1_000_000);
