@@ -7,9 +7,6 @@ public class Read {
     private double min;
     private double max;
 
-
-
-
     public  double readNumber(String prompt, double min, double max) {
         Scanner scanner = new Scanner(System.in);
         double value;

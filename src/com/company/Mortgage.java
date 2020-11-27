@@ -31,11 +31,12 @@ public class Mortgage {
     }
 
     public  double calculateBalance(
-            int principal,
-            float annualInterest,
-            byte years,
-            short numberOfPaymentsMade
+//            int principal,
+//            float annualInterest,
+//            byte years,
+             short numberOfPaymentsMade
     ) {
+
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         float numberOfPayments = years * MONTHS_IN_YEAR;
 
@@ -47,12 +48,12 @@ public class Mortgage {
     }
 
 
-    public  void printPaymentSchedule(double balance, byte years) {
+    public  void printPaymentSchedule(short years) {
         System.out.println();
         System.out.println("PAYMENT SCHEDULE");
         System.out.println("----------------");
         for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
-            balance  = calculateBalance(this.principal,this.annualInterest , this.years,(short) month);
+            double balance  = calculateBalance(month);
             System.out.println(NumberFormat.getCurrencyInstance().format(balance));
         }
     }
@@ -63,5 +64,5 @@ public class Mortgage {
         System.out.println("MORTGAGE");
         System.out.println("--------");
         System.out.println("Monthly Payments: " + mortgageFormatted);
-    };
+    }
 }
